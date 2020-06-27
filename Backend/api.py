@@ -33,3 +33,27 @@ def homepage():
 @app.route('/profile', methods=['GET'])
 def profile_artist():
     return render_template('profile.html')
+
+#Posting new enquiries
+@app.route('/new_post', methdos=['POST'])
+@requires_auth('post:gig')
+def post(f)
+    body = request.get_json()
+    new_post = Posts(
+        title = body.get('title'),
+        description = body.get('description'),
+        price = body.get('price')
+        )
+
+    try: 
+        new_post.insert()
+    except:
+        return 'Error implementing new post'
+
+#Post editing route
+# @app.route('/price/<int:id>', methods =['PATCH'])
+# @requires_auth('patch:edit')
+# def post(id):
+
+#     body = request
+

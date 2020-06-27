@@ -63,6 +63,7 @@ class Photos(db.Model):
 class Posts(db.Model):
     __tablename__ = 'posts'
     id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100))
     description = db.Column(db.String(300))
     price = db.Column(db.VARCHAR(10))
     comments = db.relationship('Comments', backref ='Posts', lazy=True)
