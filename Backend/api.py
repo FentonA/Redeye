@@ -4,7 +4,7 @@
 
 import json 
 import babel
-from flask import Flask, render_template, request, Response, flash, redirect, url_for
+from flask import Flask, render_template, request, Response, flash, redirect, url_for, jsonify
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 import logging
@@ -67,6 +67,18 @@ def homepage():
 def profile_artist():
     return render_template('profile.html')
 
+
+@app.route('/posts')
+@requires_auth('get:post')
+def get_post():
+    try:
+        post = Post.query.order_by(desc(Post.id))
+        return jsonify({
+            'success': True,
+            'post': post
+        })
+    except:
+        return "error"
 #Posting new enquiries
 @app.route('/new_post', methods=['POST'])
 @requires_auth('post:gig')
@@ -80,6 +92,10 @@ def post(f):
 
     try: 
         new_post.insert()
+        return jsonify({
+            'success': True, 
+            'posts':  Post.query.all()
+        })
     except:
         return 'Error implementing new post'
 
