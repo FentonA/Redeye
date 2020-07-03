@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './stylesheets/App.css';
 import Header from './components/Header';
 import {
   BrowserRouter as Router,

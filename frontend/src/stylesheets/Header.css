@@ -1,0 +1,30 @@
+.App-header {
+    background-color: #282c34;
+    min-height: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: start;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    position: relative;;
+  }
+  
+  
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+   h1{
+      color: red;
+      padding-right: 20px;
+  }
+h1, h2{
+    padding-left:10px !important
+}
+h2{
+    font-size: 30px
+}
