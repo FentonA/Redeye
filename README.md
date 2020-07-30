@@ -7,7 +7,7 @@ Upwork bust for Photographers and videographers
 React.js, HTML, SCSS
 
 ### Backend/Server-side: 
-Python, Flask, SQLAlchemy, Stripe API Integration
+Python, Flask, SQLAlchemy, Stripe API Integration, GraphQL
 
 ### Database
 PostgreSQL
