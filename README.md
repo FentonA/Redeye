@@ -11,3 +11,6 @@ Python, Flask, SQLAlchemy, Stripe API Integration, GraphQL
 
 ### Database
 PostgreSQL
+
+### Query language
+GraphQl
