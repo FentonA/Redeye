@@ -1,16 +1,13 @@
 # Redeye-dev
-Upwork bust for Photographers and videographers
+Mobile application to hire photographers and videographers for your events
 
 
 ## Tech Stack
 ### Frontend: 
-React.js, HTML, SCSS
+Flutter
 
 ### Backend/Server-side: 
-Python, Flask, SQLAlchemy, Stripe API Integration, GraphQL
+Golang, Stripe-api
 
 ### Database
-PostgreSQL
-
-### Query language
-GraphQl
+Firebase
